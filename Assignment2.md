@@ -1,6 +1,6 @@
 
-## :one: Multiple Containers
-### :atom: Commands:
+## TASK 1-Multiple Containers
+### Commands:
 
 ```
 $sudo su
@@ -16,7 +16,7 @@ $chmod +x ashish.sh
 $./ashish.sh
 $docker ps
 ```
-### :spiral_notepad: Shell Script:
+### Shell Script:
 
 #!/bin/bash
 #
@@ -42,25 +42,15 @@ for i in {76..100}
 done
 
 
-## :two: Container Operations
->> From the above task
->
-> Write a combination of *docker and OS commands* to get the list of **name, created** of all containers and store them in a text file
->
-
-### :atom: Commands:
+## TASK 2-Container Operations
+### Commands:
 
 $docker ps -a | awk '{print $2 , $4 $5 $6 , $12 $13 }' > list.txt
 $cat list.txt
 
 
-## :three: Container GUI
->Run a container from **your** custom docker image
->
->> The parent process must be *firefox*
->
-
-### :atom: Commands:
+## TASK 3-Container GUI
+### Commands:
 $touch Dockerfile
 $docker build -t fire:v1 .
 $docker run -d \
@@ -78,12 +68,8 @@ RUN echo "firefox created"
 
 ```
 
-## :four: Consumption:
->> From task one
->
-> Get **RAM and CPU consumptions** of the *100 containers* and stores in a file
-
-### :atom: Commands:
+## TASK 4-Consumption:
+### Commands:
 
 ```
 $touch stat.sh
@@ -91,7 +77,7 @@ $atom stat.sh
 $chmod +x stat.sh
 $./stat.sh
 ```
-### :spiral_notepad: Shell Script:
+### Shell Script:
 #!/bin/bash
 
 for i in {1..100}
